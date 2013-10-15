@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
-<title></title>
+<title>craigsAPI: craigslist Crawler | codehab.com</title>
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet'>
 <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 <link rel="stylesheet" href="demo.css">
@@ -12,11 +12,28 @@
 <body>
 <div class="container">
   <div class="wrapper">
+    <div class="half">
+      <div class="logo"><h1><i class="icon-bug icon"></i> craigslist Crawler</h1></div>
+    </div>
+    <div class="half">
+      <div class="favorites">
+        <h3>Favorites</h3>
+        <div id="favorites">No favorites saved yet.</div>
+      </div>
+    </div>
+    <div class="clr"></div>
     <div id="listings"></div>
   <div>
   <nav class="nav">
     <a href="#" class="icon-gear toggle-settings"></a>
     <div class="wrapper">
+      <input type="number" id="crawl-rate" min="1000" value="1000" step="500"><br>
+      <select id="crawl-type">
+        <option value="normal">Normal</option>
+        <option value="everything">Everything, Everywhere!</option>
+        <option value="category">All Locations by Category</option>
+        <option value="location">All Categories by Location</option>
+      </select>
       <span id="location-select"></span>
       <span id="category-select"></span>
       <input type="email" name="email" id="email" placeholder="Enter a email to enable sending listings">
